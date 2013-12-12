@@ -1,0 +1,147 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{69869c8c-0ab6-4edc-88c0-a5e86b90c7a4}</ProjectGuid>
+			<MainSource>Babyso.dpr</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>Babyso.exe</DCC_DependencyCheckOutputName>
+			<ProjectVersion>12.0</ProjectVersion>
+			<Config Condition="'$(Config)'==''">Release</Config>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>Babyso.exe</DCC_DependencyCheckOutputName>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DcuOutput>dcu</DCC_DcuOutput>
+			<DCC_ObjOutput>dcu</DCC_ObjOutput>
+			<DCC_HppOutput>dcu</DCC_HppOutput>
+			<DCC_UnitSearchPath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ResourcePath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<DCC_ObjPath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_ObjPath)</DCC_ObjPath>
+			<DCC_IncludePath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_IncludePath)</DCC_IncludePath>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<Version>7.0</Version>
+			<DCC_DcuOutput>dcu</DCC_DcuOutput>
+			<DCC_ObjOutput>dcu</DCC_ObjOutput>
+			<DCC_HppOutput>dcu</DCC_HppOutput>
+			<DCC_UnitSearchPath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_ResourcePath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_ResourcePath)</DCC_ResourcePath>
+			<DCC_ObjPath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_ObjPath)</DCC_ObjPath>
+			<DCC_IncludePath>D:\compnent\rc4\Bin;D:\compnent\autoupgrader.pro.v5.0.2.full.source.delphi.bcb.bds.crs.ccrun.109715\BDS2007;$(DCC_IncludePath)</DCC_IncludePath>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Babyso.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="src\RegExpr.pas"/>
+			<DCCReference Include="src\uAbout.pas">
+				<Form>AboutBox</Form>
+			</DCCReference>
+			<DCCReference Include="src\uFunc.pas"/>
+			<DCCReference Include="src\uHelp.pas">
+				<Form>twHelp</Form>
+			</DCCReference>
+			<DCCReference Include="src\uImp.pas">
+				<Form>dlgImp</Form>
+			</DCCReference>
+			<DCCReference Include="src\uMain.pas">
+				<Form>fmMain</Form>
+			</DCCReference>
+			<DCCReference Include="src\uProxy.pas"/>
+			<DCCReference Include="src\uSE.pas">
+				<Form>dlgSE</Form>
+			</DCCReference>
+			<DCCReference Include="src\uSEObj.pas"/>
+			<DCCReference Include="src\uSet.pas">
+				<Form>dlgSet</Form>
+			</DCCReference>
+			<DCCReference Include="src\MSXML2_TLB.pas"/>
+			<DCCReference Include="src\uXML.pas"/>
+			<DCCReference Include="src\uSEO.pas"/>
+			<DCCReference Include="src\uSubmit.pas">
+				<Form>dlgSubmit</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">9</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">2052</VersionInfo>
+						<VersionInfo Name="CodePage">936</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Babyso</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.9</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">Babyso-站长小助手</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+					<Source>
+						<Source Name="MainSource">Babyso.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
